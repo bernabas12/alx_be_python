@@ -1,15 +1,13 @@
-def perform_operation(num1, num2, operation):
-    match operation:
-        case 'add':
-            return num1 + num2
-        case 'subtract':
-            return num1 - num2
-        case 'multiply':
-            return num1 * num2
-        case 'divide':
-            if num2 != 0:
-                return num1 / num2
-            else:
-                raise ValueError("Cannot divide by zero.")
-        case _:
-            raise ValueError("Invalid operation selected.")
+def perform_operation(num1: float, num2: float, operation: str):
+    if operation == "add":
+        return num1 + num2
+    elif operation == "subtract":
+        return num1 - num2
+    elif operation == "multiply":
+        return num1 * num2
+    elif operation == "divide":
+        if num2 == 0:
+            return "Error: Division by zero"
+        return num1 / num2
+    else:
+        return "Error: Invalid operation"
