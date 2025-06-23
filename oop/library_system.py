@@ -8,7 +8,7 @@ class EBook(Book):
         super().__init__(title, author)
         self.file_size = file_size
 
-class printBook(Book):
+class PrintBook(Book):
     def __init__(self, title, author, page_count):
         super().__init__(title, author)
         self.page_count = page_count
